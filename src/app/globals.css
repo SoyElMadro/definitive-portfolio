@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 210 17% 98%; /* Light Gray */
+    --foreground: 210 14% 16%; /* Dark Blue */
+    --card: 0 0% 100%;
+    --card-foreground: 210 14% 16%; /* Dark Blue */
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 14% 16%; /* Dark Blue */
+    --primary: 210 14% 16%; /* Dark Blue */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 17% 95%; /* Slightly darker Light Gray for secondary elements */
+    --secondary-foreground: 210 14% 16%; /* Dark Blue */
+    --muted: 210 17% 90%; /* Muted gray */
+    --muted-foreground: 210 14% 40%; /* Muted dark blue */
+    --accent: 174 62% 40%; /* Teal */
+    --accent-foreground: 0 0% 98%; /* White/Light text on accent */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 14% 85%; /* Border color based on theme */
+    --input: 210 14% 85%; /* Input border */
+    --ring: 174 62% 40%; /* Teal for focus rings */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 210 14% 16%; /* Dark Blue for potential sidebar */
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 174 62% 40%; /* Teal for sidebar primary elements */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 14% 25%; /* Darker blue for sidebar accent */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 14% 30%;
+    --sidebar-ring: 174 62% 40%; /* Teal */
+  }
+  .dark {
+    --background: 210 14% 10%; /* Darker Blue */
+    --foreground: 210 17% 95%; /* Light Gray */
+    --card: 210 14% 16%; /* Dark Blue */
+    --card-foreground: 210 17% 95%; /* Light Gray */
+    --popover: 210 14% 16%; /* Dark Blue */
+    --popover-foreground: 210 17% 95%; /* Light Gray */
+    --primary: 210 17% 95%; /* Light Gray */
+    --primary-foreground: 210 14% 16%; /* Dark Blue */
+    --secondary: 210 14% 25%; /* Darker Blue */
+    --secondary-foreground: 210 17% 95%; /* Light Gray */
+    --muted: 210 14% 25%; /* Darker Blue */
+    --muted-foreground: 210 17% 60%; /* Lighter Gray */
+    --accent: 174 62% 40%; /* Teal */
+    --accent-foreground: 0 0% 98%; /* White/Light text on accent */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 14% 30%; /* Dark Border */
+    --input: 210 14% 30%; /* Dark Input Border */
+    --ring: 174 62% 40%; /* Teal for focus rings */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 210 14% 16%; /* Dark Blue */
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 174 62% 40%; /* Teal */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 14% 25%; /* Darker Blue */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 14% 30%;
+    --sidebar-ring: 174 62% 40%; /* Teal */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Enable smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+  }
+  section {
+      /* Responsive padding for sections */
+      @apply py-12 sm:py-16 md:py-20 lg:py-24 px-4; /* Added default horizontal padding */
+      /* Ensure sections have a minimum width to prevent overlap */
+      min-width: 320px;
+  }
+
+  /* Ensure links maintain color consistency */
+  a {
+      @apply text-accent hover:text-accent/80 transition-colors duration-200;
+  }
+}
+
+/* Added Keyframes for animations */
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
+}

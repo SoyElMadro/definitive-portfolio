@@ -1,0 +1,85 @@
+{
+  "Header": {
+    "portfolio": "Portfolio",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggleMenu": "Toggle Menu",
+    "language": "Language"
+  },
+  "Hero": {
+    "programmer": "Programmer",
+    "yearsOld": "{age} years old",
+    "basedIn": "Based in {country}",
+    "github": "GitHub",
+    "linkedIn": "LinkedIn",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "About": {
+    "title": "About Me"
+  },
+  "Skills": {
+    "title": "My Skills",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "databases": "Databases",
+    "tools": "Tools & Platforms",
+    "other": "Other Skills"
+  },
+  "Projects": {
+    "title": "My Projects",
+    "codeDocAi": {
+      "title": "CodeDoc AI",
+      "description": "CodeDoc AI is a tool that uses artificial intelligence (Gemini AI) to automatically generate documentation for code projects, efficiently enhancing the accessibility and understanding of source code."
+    },
+    "expensesTracker": {
+      "title": "Expenses Tracker",
+      "description": "Web application that tracks your expenses, displaying them in logs and graphs. Available in dark mode."
+    },
+    "typingGame": {
+      "title": "Typing Game",
+      "description": "A simple and dynamic web game to improve your typing speed. Built with HTML, CSS, and plain JavaScript. Ideal for practicing typing in a fun way."
+    },
+    "securePasswordGenerator": {
+      "title": "Secure Password Generator",
+      "description": "Allows you to create customized random passwords based on selected length and character types (uppercase, lowercase, numbers, and symbols). Ideal for quickly and easily improving online security."
+    },
+    "code": "Code",
+    "liveDemo": "Live Demo"
+  },
+  "Contact": {
+    "title": "Contact Me",
+    "getInTouch": "Get in Touch",
+    "intro": "Have a question, project idea, or just want to connect? Feel free to reach out!",
+    "email": "Email",
+    "linkedIn": "LinkedIn",
+    "sendMessage": "Send a Message",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "nameError": "Name must be at least 2 characters.",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "emailError": "Please enter a valid email address.",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "messageError": "Message must be at least 10 characters.",
+      "submit": "Send Message",
+      "successTitle": "Message Sent!",
+      "successDescription": "Thank you for contacting me. I will get back to you soon.",
+      "errorTitle": "Submission Failed",
+      "errorDescription": "Oops! Something went wrong. Please try again later."
+    }
+  },
+  "Footer": {
+    "rightsReserved": "All rights reserved."
+  },
+  "LanguageSwitcher": {
+    "select": "Select Language",
+    "en": "English",
+    "es": "Spanish"
+  },
+  "Bio": "I'm Gonzalo Madroñal, an 18-year-old programmer from Argentina driven by a passion for crafting efficient, scalable, and user-friendly software solutions. I possess a strong foundation in full-stack development, constantly exploring new technologies to build innovative web and mobile applications. My expertise includes modern frontend frameworks like React and Next.js, coupled with backend proficiency in Node.js and experience with various databases. I am adept at utilizing development tools and methodologies to produce clean, maintainable, and high-quality code. Discover my projects and skillset below, and feel free to connect!"
+}
