@@ -30,36 +30,96 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
           {t('title')}
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <Card key={index} className="flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-xl">
+            {projects.map((project, index) => (
+            <Card
+              key={index}
+              className={`flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out ${
+              project.title === "USA2 Reventas"
+                ? "scale-[1.05] shadow-2xl border-2 border-accent bg-accent/10"
+                : "hover:scale-[1.03] hover:shadow-xl"
+              }`}
+            >
               <CardHeader>
-                <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
-                <CardDescription className="text-muted-foreground min-h-[4rem] text-ellipsis">
-                  {project.description}
-                </CardDescription>
+              <CardTitle
+                className={`text-xl font-semibold ${
+                project.title === "USA2 Reventas" ? "text-accent" : ""
+                }`}
+              >
+                {project.title}
+              </CardTitle>
+              <CardDescription
+                className={`text-muted-foreground min-h-[4rem] text-ellipsis ${
+                project.title === "USA2 Reventas" ? "font-medium" : ""
+                }`}
+              >
+                {project.description}
+              </CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary" className="text-xs transition-colors duration-200">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
+              <div className="mb-4 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (tag === 'AI' ? (
+                  <Badge
+                  key={tag}
+                  variant="secondary"
+                  className="text-xs text-white bg-accent hover:bg-gray-800 transition-colors duration-200 select-none"
+                >
+                  {tag}
+                </Badge>
+                ) : (
+                <Badge
+                  key={tag}
+                  variant="secondary"
+                  className={`text-xs transition-colors duration-200 select-none ${
+                  project.title === "USA2 Reventas" ? "bg-accent text-white hover:text-teal-400" : ""
+                  }`}
+                >
+                  {tag}
+                </Badge>
+                )))}
+              </div>
               </CardContent>
               <CardFooter className="mt-auto flex flex-wrap justify-start gap-3 border-t pt-4">
-                <Button asChild variant="outline" size="sm" className="transition-colors duration-200">
-                  <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-1.5 h-4 w-4" /> {t('code')}
-                  </Link>
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className={`transition-colors duration-200 ${
+                project.title === "USA2 Reventas" ? "border-accent text-accent" : ""
+                }`}
+              >
+                {project.githubLink && project.githubLink !== "https://github.com/SoyElMadro/#" ? (
+                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-1.5 h-4 w-4" /> {t("code")}
+                </Link>
+                ) : null}
+              </Button>
+              {project.liveLink && project.liveLink !== "https://usa2-reventa.vercel.app/" ? (
+                <Button
+                asChild
+                variant="ghost"
+                size="sm"
+                className={`text-accent hover:text-accent hover:bg-accent/10 transition-colors duration-200 ${
+                  project.title === "USA2 Reventas" ? "font-bold" : ""
+                }`}
+                >
+                <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-1.5 h-4 w-4" /> {t("liveDemo")}
+                </Link>
                 </Button>
-                {project.liveLink && project.liveLink !== '#' && (
-                  <Button asChild variant="ghost" size="sm" className="text-accent hover:text-accent hover:bg-accent/10 transition-colors duration-200">
-                    <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-1.5 h-4 w-4" /> {t('liveDemo')}
-                    </Link>
-                  </Button>
-                )}
+              ) : (
+                <Button
+                asChild
+                variant="ghost"
+                size="sm"
+                className={`text-accent hover:text-accent hover:bg-accent/10 transition-colors duration-200 ${
+                  project.title === "USA2 Reventas" ? "font-bold" : ""
+                }`}
+                >
+                <Link href="https://usa2-reventa.vercel.app/" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="mr-1.5 h-4 w-4" /> {t("openPage")}
+                </Link>
+                </Button>
+              )}
               </CardFooter>
             </Card>
           ))}

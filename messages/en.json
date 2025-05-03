@@ -15,7 +15,8 @@
     "github": "GitHub",
     "linkedIn": "LinkedIn",
     "viewProjects": "View Projects",
-    "contactMe": "Contact Me"
+    "contactMe": "Contact Me",
+    "downloadCV": "Resume"
   },
   "About": {
     "title": "About Me"
@@ -53,7 +54,8 @@
       "description": "Allows you to create customized random passwords based on selected length and character types (uppercase, lowercase, numbers, and symbols). Ideal for quickly and easily improving online security."
     },
     "code": "Code",
-    "liveDemo": "Live Demo"
+    "liveDemo": "Live Demo",
+    "openPage": "Open Page"
   },
   "Contact": {
     "title": "Contact Me",
@@ -61,6 +63,7 @@
     "intro": "Have a question, project idea, or just want to connect? Feel free to reach out!",
     "email": "Email",
     "linkedIn": "LinkedIn",
+    "whatsApp":"WhatsApp",
     "sendMessage": "Send a Message",
     "form": {
       "name": "Name",

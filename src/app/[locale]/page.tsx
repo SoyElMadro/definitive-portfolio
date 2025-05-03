@@ -17,6 +17,7 @@ const personalInfo = {
   githubUsername: 'SoyElMadro',
   githubLink: 'https://github.com/SoyElMadro',
   linkedInLink: 'https://www.linkedin.com/in/madro',
+  cvLink: '',
   email: 'madronalgonzalo06@gmail.com',
 };
 
@@ -45,7 +46,7 @@ export async function generateMetadata(props: { params: { locale: string } }): P
 }
 
 const projectTags: Record<string, string[]> = {
-  codeDocAi: ['Next.js', 'TypeScript', 'Tailwind CSS', 'ShadCN UI', 'React', 'Responsive Design'],
+  codeDocAi: ['Next.js', 'TypeScript', 'Tailwind CSS', 'ShadCN UI', 'React', 'Responsive Design', 'AI'],
   expensesTracker: ['Next.js', 'TailwindCSS', 'localStorage', 'Responsive Design'],
   usa2Reventas: ['Next.js', 'TypeScript', 'TailwindCSS', 'MongoDB', 'Cloudinary', 'Vercel', 'Responsive Design'],
   typingGame: ['HTML', 'CSS', 'JavaScript'],
@@ -59,7 +60,7 @@ export default function Home() {
    const projects = projectDataKeys.map(key => ({
     title: t(`Projects.${key}.title`),
     description: t(`Projects.${key}.description`),
-    githubLink: `https://github.com/${personalInfo.githubUsername}/${key === 'codeDocAi' ? 'codedoc-ai' : key === 'expensesTracker' ? 'expenses-tracker' : key === 'typingGame' ? 'typing-game' : 'generador-de-contrasenas-seguras'}`,
+    githubLink: `https://github.com/${personalInfo.githubUsername}/${key === 'codeDocAi' ? 'codedoc-ai' : key === 'expensesTracker' ? 'expenses-tracker' : key === 'typingGame' ? 'typing-game' : key === 'securePasswordGenerator' ? 'generador-de-contrasenas-seguras' : '#'}`,
     liveLink: key === 'usa2Reventas' ? 'https://usa2-reventa.vercel.app/' : key === 'typingGame' ? 'https://65a429e9e7ac41aa2ac30bca--chimerical-quokka-ccd05e.netlify.app/' : key === 'securePasswordGenerator' ? 'https://darling-sawine-61aa4f.netlify.app/' : key === 'expensesTracker' ? 'https://expenses-tracker-chi-gray.vercel.app/' : 'https://codedoc-ai.vercel.app/',
     tags: projectTags[key] || [], 
   }));
@@ -78,6 +79,7 @@ export default function Home() {
             age={personalInfo.age}
             githubLink={personalInfo.githubLink}
             linkedInLink={personalInfo.linkedInLink}
+            cvLink={personalInfo.cvLink}
         />
         <About bio={staticBio} />
         <Skills skills={skillsData} />

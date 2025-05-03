@@ -17,7 +17,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { Mail, Linkedin, Send } from 'lucide-react';
+import { Mail, Linkedin, MessageCircleMore, Send } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { useTranslations } from 'next-intl';
@@ -107,24 +107,33 @@ export const Contact: FC<ContactProps> = ({ email, linkedInLink }) => {
                    {t('intro')}
                 </p>
                 <div className="space-y-4">
-                     <Link href={`mailto:${email}`} className="flex items-start gap-3 group sm:items-center transition-opacity duration-200 hover:opacity-80">
-                         <div className="flex-shrink-0 rounded-full bg-primary/10 p-3 group-hover:bg-accent transition-colors duration-300 ease-in-out mt-1 sm:mt-0">
-                            <Mail className="h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300 ease-in-out" />
-                         </div>
-                         <div>
-                            <p className="font-medium text-primary">{t('email')}</p>
-                            <p className="text-muted-foreground group-hover:text-accent transition-colors duration-300 ease-in-out break-words">{email}</p>
-                         </div>
-                     </Link>
-                     <Link href={linkedInLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group sm:items-center transition-opacity duration-200 hover:opacity-80">
-                         <div className="flex-shrink-0 rounded-full bg-primary/10 p-3 group-hover:bg-accent transition-colors duration-300 ease-in-out mt-1 sm:mt-0">
-                            <Linkedin className="h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300 ease-in-out" />
-                         </div>
-                         <div>
-                             <p className="font-medium text-primary">{t('linkedIn')}</p>
-                             <p className="text-muted-foreground group-hover:text-accent transition-colors duration-300 ease-in-out break-words">linkedin.com/in/madro</p>
-                         </div>
-                    </Link>
+                  <Link href={`mailto:${email}`} className="flex items-start gap-3 group sm:items-center transition-opacity duration-200 hover:opacity-80">
+                    <div className="flex-shrink-0 rounded-full bg-primary/10 p-3 group-hover:bg-accent transition-colors duration-300 ease-in-out mt-1 sm:mt-0">
+                      <Mail className="h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300 ease-in-out" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">{t('email')}</p>
+                      <p className="text-muted-foreground group-hover:text-accent transition-colors duration-300 ease-in-out break-words">{email}</p>
+                    </div>
+                  </Link>
+                  <Link href={linkedInLink} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group sm:items-center transition-opacity duration-200 hover:opacity-80">
+                    <div className="flex-shrink-0 rounded-full bg-primary/10 p-3 group-hover:bg-accent transition-colors duration-300 ease-in-out mt-1 sm:mt-0">
+                      <Linkedin className="h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300 ease-in-out" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">{t('linkedIn')}</p>
+                      <p className="text-muted-foreground group-hover:text-accent transition-colors duration-300 ease-in-out break-words">linkedin.com/in/madro</p>
+                    </div>
+                  </Link>
+                  <Link href={`https://wa.me/5491156371489`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group sm:items-center transition-opacity duration-200 hover:opacity-80">
+                    <div className="flex-shrink-0 rounded-full bg-primary/10 p-3 group-hover:bg-accent transition-colors duration-300 ease-in-out mt-1 sm:mt-0">
+                      <MessageCircleMore className="h-6 w-6 text-primary group-hover:text-accent-foreground transition-colors duration-300 ease-in-out" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">{t('whatsApp')}</p>
+                      <p className="text-muted-foreground group-hover:text-accent transition-colors duration-300 ease-in-out break-words">+54 9 11 5637 1489</p>
+                    </div>
+                  </Link>
                 </div>
             </div>
 

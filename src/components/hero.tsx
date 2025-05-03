@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, MapPin } from 'lucide-react';
+import { Github, Linkedin, MapPin, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import type { FC } from 'react';
@@ -12,10 +12,11 @@ interface HeroProps {
   country: string;
   age: number;
   githubLink: string;
-  linkedInLink?: string;
+  linkedInLink: string;
+  cvLink: string;
 }
 
-export const Hero: FC<HeroProps> = ({ name, surname, country, age, githubLink, linkedInLink }) => {
+export const Hero: FC<HeroProps> = ({ name, surname, country, age, githubLink, linkedInLink, cvLink }) => {
   const t = useTranslations('Hero');
 
   return (
@@ -33,23 +34,28 @@ export const Hero: FC<HeroProps> = ({ name, surname, country, age, githubLink, l
               <Github className="mr-2 h-5 w-5" /> {t('github')}
             </Link>
           </Button>
-          {linkedInLink && (
-            <Button asChild variant="outline" size="lg" className="transition-transform duration-300 ease-in-out hover:scale-105">
-              <Link href={linkedInLink} target="_blank" rel="noopener noreferrer">
-                <Linkedin className="mr-2 h-5 w-5" /> {t('linkedIn')}
-              </Link>
-            </Button>
-          )}
-           <Button asChild variant="outline" size="lg" className="transition-transform duration-300 ease-in-out hover:scale-105">
-             <Link href="#projects">
-               {t('viewProjects')}
-             </Link>
-           </Button>
-           <Button asChild variant="default" size="lg" className="bg-accent hover:bg-accent/90 transition-transform duration-300 ease-in-out hover:scale-105">
-              <Link className="hover:text-gray-100" href="#contact">
-                {t('contactMe')}
-              </Link>
-           </Button>
+          <Button asChild variant="outline" size="lg" className="transition-transform duration-300 ease-in-out hover:scale-105">
+            <Link href={linkedInLink} target="_blank" rel="noopener noreferrer">
+              <Linkedin className="mr-2 h-5 w-5" /> {t('linkedIn')}
+            </Link>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="transition-transform duration-300 ease-in-out hover:scale-105">
+            <Link href="#projects">
+              {t('viewProjects')}
+            </Link>
+          </Button>
+          <Button asChild variant="default" size="lg" className="bg-accent hover:bg-accent/90 transition-transform duration-300 ease-in-out hover:scale-105">
+            <Link className="hover:text-gray-100" href="#contact">
+              {t('contactMe')}
+            </Link>
+          </Button>
+        </div>
+        <div className="mt-6">
+          <Button asChild variant="default" size="lg" className="transition-transform duration-300 ease-in-out hover:scale-105">
+            <Link href={cvLink} target="_blank" rel="noopener noreferrer" download>
+              <Download className="mr-2 h-5 w-5" /> {t('downloadCV')}
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

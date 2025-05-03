@@ -15,7 +15,8 @@
     "github": "GitHub",
     "linkedIn": "LinkedIn",
     "viewProjects": "Ver Proyectos",
-    "contactMe": "Contáctame"
+    "contactMe": "Contáctame",
+    "downloadCV": "Descargar CV"
   },
   "About": {
     "title": "Acerca de Mí"
@@ -53,7 +54,8 @@
       "description": "Permite crear contraseñas aleatorias personalizadas según la longitud y tipos de caracteres seleccionados (mayúsculas, minúsculas, números y símbolos). Ideal para mejorar la seguridad online de forma rápida y sencilla."
     },
     "code": "Código",
-    "liveDemo": "Demo en Vivo"
+    "liveDemo": "Demo en Vivo",
+    "openPage": "Abrir Página"
   },
   "Contact": {
     "title": "Contáctame",
@@ -61,6 +63,7 @@
     "intro": "¿Tienes alguna pregunta, idea de proyecto o simplemente quieres conectar? ¡No dudes en contactarme!",
     "email": "Correo Electrónico",
     "linkedIn": "LinkedIn",
+    "whatsApp":"WhatsApp",
     "sendMessage": "Enviar un Mensaje",
     "form": {
       "name": "Nombre",
