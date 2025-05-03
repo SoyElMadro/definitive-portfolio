@@ -21,7 +21,7 @@ const personalInfo = {
 };
 
 const projectDataKeys = [
-  'codeDocAi', 'expensesTracker', 'usa2Reventas', 'typingGame', 'securePasswordGenerator',  
+  'codeDocAi', 'usa2Reventas', 'expensesTracker', 'typingGame', 'securePasswordGenerator',  
 ];
 
 const skillsData = {

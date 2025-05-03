@@ -36,13 +36,13 @@
       "title": "CodeDoc AI",
       "description": "CodeDoc AI es una herramienta que utiliza inteligencia artificial (Gemini AI) para generar documentación automáticamente para proyectos de código, mejorando la accesibilidad y comprensión del código fuente de manera eficiente."
     },
+    "usa2Reventas": {
+      "title": "USA2 Reventas",
+      "description": "USA2 Reventa. Es una empresa dedicada a encontrar y ofrecerte productos de segunda mano en excelentes condiciones."
+    },
     "expensesTracker": {
       "title": "Expenses Tracker",
       "description": "Aplicación web que rastrea tus gastos, mostrándolos en registros y gráficos. Disponible en modo oscuro."
-    },
-    "usa2Reventas": {
-      "title": "USA2 Reventas",
-      "description": "Web application that tracks your expenses, displaying them in logs and graphs. Available in dark mode."
     },
     "typingGame": {
       "title": "Typing Game",
