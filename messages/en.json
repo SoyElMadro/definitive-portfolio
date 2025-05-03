@@ -9,7 +9,7 @@
     "language": "Language"
   },
   "Hero": {
-    "programmer": "Programmer",
+    "programmer": "Full Stack - Web Developer",
     "yearsOld": "{age} years old",
     "basedIn": "Based in {country}",
     "github": "GitHub",
@@ -25,6 +25,8 @@
     "frontend": "Frontend Development",
     "backend": "Backend Development",
     "databases": "Databases",
+    "languages": "Languages",
+    "softSkills": "Soft Skills",
     "tools": "Tools & Platforms",
     "other": "Other Skills"
   },
@@ -36,6 +38,10 @@
     },
     "expensesTracker": {
       "title": "Expenses Tracker",
+      "description": "Web application that tracks your expenses, displaying them in logs and graphs. Available in dark mode."
+    },
+    "usa2Reventas": {
+      "title": "USA2 Reventas",
       "description": "Web application that tracks your expenses, displaying them in logs and graphs. Available in dark mode."
     },
     "typingGame": {

@@ -1,13 +1,15 @@
 import type { FC } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BrainCircuit, Database, Wrench, Code, Lightbulb } from 'lucide-react';
+import { BrainCircuit, Database, Wrench, Code, Lightbulb, Languages } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 interface SkillsData {
   frontend: string[];
   backend: string[];
   databases: string[];
+  languages: string[];
+  softSkills: string[];
   tools: string[];
   other: string[];
 }
@@ -24,6 +26,10 @@ const getCategoryIcon = (category: keyof SkillsData) => {
       return BrainCircuit;
     case 'databases':
       return Database;
+    case 'languages':
+      return Languages;
+    case 'softSkills':
+      return Lightbulb;
     case 'tools':
       return Wrench;
     case 'other':
