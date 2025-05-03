@@ -52,9 +52,15 @@ export const Hero: FC<HeroProps> = ({ name, surname, country, age, githubLink, l
         </div>
         <div className="mt-6">
           <Button asChild variant="default" size="lg" className="transition-transform duration-300 ease-in-out hover:scale-105">
-            <Link href={cvLink} target="_blank" rel="noopener noreferrer" download>
+            {t('downloadCV') == 'Resume' ? (
+              <Link href='/Resume - Gonzalo Madroñal.pdf' target="_blank" rel="noopener noreferrer" download>
               <Download className="mr-2 h-5 w-5" /> {t('downloadCV')}
             </Link>
+            ) : (
+              <Link href={cvLink} target="_blank" rel="noopener noreferrer" download>
+                <Download className="mr-2 h-5 w-5" /> {t('downloadCV')}
+              </Link>
+            )}
           </Button>
         </div>
       </div>

@@ -1,43 +1,30 @@
-import type { Metadata } from 'next';
+import React, { ReactNode } from 'react';
 import { GeistSans } from 'geist/font/sans';
-import '../globals.css';
-import { Toaster } from "@/components/ui/toaster";
-import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import { ReactNode } from 'react';
-import { locales } from '@/i18n';
+import ClientProviders from '@/components/ClientProviders';
+import '../globals.css';
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return [{ locale: 'en' }, { locale: 'es' }];
 }
-
-export const metadata: Metadata = {
-  title: 'Madroñal Portfolio',
-  description: 'Portfolio for Gonzalo Madroñal',
-};
 
 interface LocaleLayoutProps {
   children: ReactNode;
   params: { locale: string };
 }
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: Readonly<LocaleLayoutProps>) {
-  const { locale } = params;
-  const messages = await getMessages();
+export default async function LocaleLayout({ children, params: { locale } }: Readonly<LocaleLayoutProps>) {
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes='any' />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${GeistSans.variable} font-sans antialiased`}>
-        <NextIntlClientProvider messages={messages}>
+        <ClientProviders locale={locale} messages={messages}>
           {children}
-          <Toaster />
-        </NextIntlClientProvider>
+        </ClientProviders>
       </body>
     </html>
   );

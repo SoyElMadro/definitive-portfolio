@@ -17,7 +17,7 @@ const personalInfo = {
   githubUsername: 'SoyElMadro',
   githubLink: 'https://github.com/SoyElMadro',
   linkedInLink: 'https://www.linkedin.com/in/madro',
-  cvLink: '',
+  cvLink: '/CV - Gonzalo Madroñal.pdf',
   email: 'madronalgonzalo06@gmail.com',
 };
 
@@ -65,7 +65,7 @@ export default function Home() {
     tags: projectTags[key] || [], 
   }));
 
-  const staticBio = t('Bio'); // Get translated bio
+  const staticBio = t('Bio');
 
   return (
     <div className="flex min-h-screen flex-col">
