@@ -31,7 +31,7 @@
     "other": "Other Skills"
   },
   "Projects": {
-    "title": "My Projects",
+    "title": "Projects Showcase",
     "codeDocAi": {
       "title": "CodeDoc AI",
       "description": "CodeDoc AI is a tool that uses artificial intelligence (Gemini AI) to automatically generate documentation for code projects, efficiently enhancing the accessibility and understanding of source code."
