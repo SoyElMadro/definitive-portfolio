@@ -70,7 +70,7 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
                   key={tag}
                   variant="secondary"
                   className={`text-xs transition-colors duration-200 select-none ${
-                  project.title === "USA2 Reventas" ? "bg-accent text-white hover:text-teal-400" : ""
+                  project.title === "USA2 Reventas" || project.title === "InfiniTech Studios" ? "bg-accent text-white hover:text-teal-400" : ""
                   }`}
                 >
                   {tag}
@@ -84,7 +84,7 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
                 variant="outline"
                 size="sm"
                 className={`transition-colors duration-200 ${
-                project.title === "USA2 Reventas" ? "border-accent text-accent" : ""
+                project.title === "USA2 Reventas" || project.title === "InfiniTech Studios" ? "border-accent text-accent" : ""
                 }`}
               >
                 {project.githubLink && project.githubLink !== "https://github.com/SoyElMadro/#" ? (
@@ -99,7 +99,7 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
                 variant="ghost"
                 size="sm"
                 className={`text-accent hover:text-accent hover:bg-accent/10 transition-colors duration-200 ${
-                  project.title === "USA2 Reventas" ? "font-bold" : ""
+                  project.title === "USA2 Reventas" || project.title === "InfiniTech Studios" ? "font-bold" : ""
                 }`}
                 >
                 <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
@@ -112,7 +112,7 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
                 variant="ghost"
                 size="sm"
                 className={`text-accent hover:text-accent hover:bg-accent/10 transition-colors duration-200 ${
-                  project.title === "USA2 Reventas" ? "font-bold" : ""
+                  project.title === "USA2 Reventas" || project.title === "InfiniTech Studios" ? "font-bold" : ""
                 }`}
                 >
                 <Link href="https://usa2-reventa.vercel.app/" target="_blank" rel="noopener noreferrer">
