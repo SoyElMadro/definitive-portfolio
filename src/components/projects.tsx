@@ -34,7 +34,7 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
             <Card
               key={index}
               className={`flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out ${
-              project.title === "USA2 Reventas"
+              project.title === "USA2 Reventas" || project.title === "InfiniTech Studios"
                 ? "scale-[1.05] shadow-2xl border-2 border-accent bg-accent/10"
                 : "hover:scale-[1.03] hover:shadow-xl"
               }`}
@@ -42,14 +42,14 @@ export const Projects: FC<ProjectsProps> = ({ projects }) => {
               <CardHeader>
               <CardTitle
                 className={`text-xl font-semibold ${
-                project.title === "USA2 Reventas" ? "text-accent" : ""
+                project.title === "USA2 Reventas" || project.title === "InfiniTech Studios" ? "text-accent" : ""
                 }`}
               >
                 {project.title}
               </CardTitle>
               <CardDescription
                 className={`text-muted-foreground min-h-[4rem] text-ellipsis ${
-                project.title === "USA2 Reventas" ? "font-medium" : ""
+                project.title === "USA2 Reventas" || project.title === "InfiniTech Studios" ? "font-medium" : ""
                 }`}
               >
                 {project.description}

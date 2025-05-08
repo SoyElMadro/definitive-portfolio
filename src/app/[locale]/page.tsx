@@ -22,7 +22,7 @@ const personalInfo = {
 };
 
 const projectDataKeys = [
-  'codeDocAi', 'usa2Reventas', 'expensesTracker', 'typingGame', 'securePasswordGenerator',  
+  'codeDocAi', 'usa2Reventas', 'expensesTracker', 'infiniTechStudios', 'typingGame', 'securePasswordGenerator',  
 ];
 
 const skillsData = {
@@ -49,6 +49,7 @@ const projectTags: Record<string, string[]> = {
   codeDocAi: ['Next.js', 'TypeScript', 'Tailwind CSS', 'ShadCN UI', 'React', 'Responsive Design', 'AI'],
   expensesTracker: ['Next.js', 'TailwindCSS', 'localStorage', 'Responsive Design'],
   usa2Reventas: ['Next.js', 'TypeScript', 'TailwindCSS', 'MongoDB', 'Cloudinary', 'Vercel', 'Responsive Design'],
+  infiniTechStudios: ['Next.js', 'TypeScript', 'TailwindCSS', 'Vercel', 'Responsive Design'],
   typingGame: ['HTML', 'CSS', 'JavaScript'],
   securePasswordGenerator: ['HTML', 'CSS', 'JavaScript'],
 };
@@ -61,7 +62,7 @@ export default function Home() {
     title: t(`Projects.${key}.title`),
     description: t(`Projects.${key}.description`),
     githubLink: `https://github.com/${personalInfo.githubUsername}/${key === 'codeDocAi' ? 'codedoc-ai' : key === 'expensesTracker' ? 'expenses-tracker' : key === 'typingGame' ? 'typing-game' : key === 'securePasswordGenerator' ? 'generador-de-contrasenas-seguras' : '#'}`,
-    liveLink: key === 'usa2Reventas' ? 'https://usa2-reventa.vercel.app/' : key === 'typingGame' ? 'https://65a429e9e7ac41aa2ac30bca--chimerical-quokka-ccd05e.netlify.app/' : key === 'securePasswordGenerator' ? 'https://darling-sawine-61aa4f.netlify.app/' : key === 'expensesTracker' ? 'https://expenses-tracker-chi-gray.vercel.app/' : 'https://codedoc-ai.vercel.app/',
+    liveLink: key === 'usa2Reventas' ? 'https://usa2-reventa.vercel.app/' : key === 'typingGame' ? 'https://65a429e9e7ac41aa2ac30bca--chimerical-quokka-ccd05e.netlify.app/' : key === 'securePasswordGenerator' ? 'https://darling-sawine-61aa4f.netlify.app/' : key === 'expensesTracker' ? 'https://expenses-tracker-chi-gray.vercel.app/' : key === 'codeDocAi' ? 'https://codedoc-ai.vercel.app/' : 'https://infinitechstudios.vercel.app/',
     tags: projectTags[key] || [], 
   }));
 

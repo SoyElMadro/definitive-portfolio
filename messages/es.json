@@ -45,6 +45,10 @@
       "title": "Expenses Tracker",
       "description": "Aplicación web que rastrea tus gastos, mostrándolos en registros y gráficos. Disponible en modo oscuro."
     },
+    "infiniTechStudios": {
+      "title": "InfiniTech Studios",
+      "description": "InfiniTech Studios es un equipo independiente apasionado por crear videojuegos que inspiran, entretienen y dejan huella. Su objetivo es dar vida a ideas originales y reinventar clásicos con una perspectiva moderna."
+    },
     "typingGame": {
       "title": "Typing Game",
       "description": "Un juego web simple y dinámico para mejorar tu velocidad de tipeo. Hecho con HTML, CSS y JavaScript puro. Ideal para practicar mecanografía de forma divertida."

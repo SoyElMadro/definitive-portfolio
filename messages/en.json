@@ -45,6 +45,10 @@
       "title": "Expenses Tracker",
       "description": "Web application that tracks your expenses, displaying them in logs and graphs. Available in dark mode."
     },
+    "infiniTechStudios": {
+      "title": "InfiniTech Studios",
+      "description": "InfiniTech Studios it's an indie team that's passionate about creating games that inspire, entertain, and make a difference. Its aim is to bring original ideas to life and reinvent classics with a modern perspective."
+    },
     "typingGame": {
       "title": "Typing Game",
       "description": "A simple and dynamic web game to improve your typing speed. Built with HTML, CSS, and plain JavaScript. Ideal for practicing typing in a fun way."
