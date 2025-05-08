@@ -62,7 +62,7 @@ export default function Home() {
     title: t(`Projects.${key}.title`),
     description: t(`Projects.${key}.description`),
     githubLink: `https://github.com/${personalInfo.githubUsername}/${key === 'codeDocAi' ? 'codedoc-ai' : key === 'expensesTracker' ? 'expenses-tracker' : key === 'typingGame' ? 'typing-game' : key === 'securePasswordGenerator' ? 'generador-de-contrasenas-seguras' : '#'}`,
-    liveLink: key === 'usa2Reventas' ? 'https://usa2-reventa.vercel.app/' : key === 'typingGame' ? 'https://65a429e9e7ac41aa2ac30bca--chimerical-quokka-ccd05e.netlify.app/' : key === 'securePasswordGenerator' ? 'https://darling-sawine-61aa4f.netlify.app/' : key === 'expensesTracker' ? 'https://expenses-tracker-chi-gray.vercel.app/' : key === 'codeDocAi' ? 'https://codedoc-ai.vercel.app/' : 'https://infinitechstudios.vercel.app/',
+    liveLink: key === 'usa2Reventas' ? 'https://usa2-reventa.vercel.app/' : key === 'typingGame' ? 'https://65a429e9e7ac41aa2ac30bca--chimerical-quokka-ccd05e.netlify.app/' : key === 'securePasswordGenerator' ? 'https://darling-sawine-61aa4f.netlify.app/' : key === 'expensesTracker' ? 'https://expenses-tracker-chi-gray.vercel.app/' : key === 'infiniTechStudios' ? 'https://infinitechstudios.vercel.app/' : 'https://codedoc-ai.vercel.app/',
     tags: projectTags[key] || [], 
   }));
 
